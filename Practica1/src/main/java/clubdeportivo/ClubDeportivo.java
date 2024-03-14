@@ -49,6 +49,9 @@ public class ClubDeportivo {
 		}
 		int pos = buscar(g);
 		if (pos == -1) { // El grupo es nuevo
+			if(ngrupos == grupos.length){
+				throw new ClubException("ERROR: El límite de grupos no se puede superar");
+			}
 			grupos[ngrupos] = g;
 			ngrupos++;
 		} else { // El grupo ya existe --> modificamos las plazas
