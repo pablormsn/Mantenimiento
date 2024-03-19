@@ -1,4 +1,4 @@
-package org.mps.deque;
+package com;
 
 public class DoubleLinkedList<T> implements DoubleLinkedQueue<T> {
 

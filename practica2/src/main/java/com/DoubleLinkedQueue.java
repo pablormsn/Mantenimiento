@@ -1,4 +1,4 @@
-package org.mps.deque;
+package com;
 
 /**
  * A double-ended queue or deque is a linear collection that supports element

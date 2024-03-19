@@ -1,4 +1,4 @@
-package org.mps.deque;
+package com;
 
 /**
  * Class representing a node of a double-ended queue (deque). Each node has references to

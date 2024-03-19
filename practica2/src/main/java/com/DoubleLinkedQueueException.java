@@ -1,4 +1,4 @@
-package org.mps.deque;
+package com;
 
 public class DoubleLinkedQueueException extends RuntimeException {
     public DoubleLinkedQueueException(String message) {
