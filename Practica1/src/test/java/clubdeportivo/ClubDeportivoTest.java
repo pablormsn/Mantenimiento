@@ -16,4 +16,12 @@ public class ClubDeportivoTest {
         String cadena = club.toString();
         assertTrue(cadena.contains("Club Deportivo"));
     }
+
+    @Test
+    public void testAnyadirActividad() throws ClubException {
+        String[] grupo1 = {"123A", "Kizomba", "10", "10", "25.0"};
+        club.anyadirActividad(grupo1);
+        Grupo grupo = new Grupo("123A", "Kizomba", 10, 10, 25.0);
+        assertTrue(club.toString().contains(grupo.toString()));
+    }
 }

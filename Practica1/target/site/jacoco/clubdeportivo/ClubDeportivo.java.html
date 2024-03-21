@@ -4,7 +4,7 @@ import java.util.StringJoiner;
 
 public class ClubDeportivo {
 	private String nombre;
-	private int ngrupos;
+<span class="fc" id="L7">	private int ngrupos=0;</span>
 	private Grupo[] grupos;
 	private static final int TAM = 10;
 
@@ -21,43 +21,43 @@ public class ClubDeportivo {
 <span class="fc" id="L21">	}</span>
 
 	private int buscar(Grupo g) {
-<span class="nc" id="L24">		int i = 0;</span>
-<span class="nc bnc" id="L25" title="All 4 branches missed.">		while (i &lt; ngrupos &amp;&amp; !g.equals(grupos[i])) {</span>
+<span class="fc" id="L24">		int i = 0;</span>
+<span class="pc bpc" id="L25" title="3 of 4 branches missed.">		while (i &lt; ngrupos &amp;&amp; !g.equals(grupos[i])) {</span>
 <span class="nc" id="L26">			i++;</span>
 		}
-<span class="nc bnc" id="L28" title="All 2 branches missed.">		if (i == ngrupos) {</span>
-<span class="nc" id="L29">			i = -1;</span>
+<span class="pc bpc" id="L28" title="1 of 2 branches missed.">		if (i == ngrupos) {</span>
+<span class="fc" id="L29">			i = -1;</span>
 		}
-<span class="nc" id="L31">		return i;</span>
+<span class="fc" id="L31">		return i;</span>
 	}
 
 	public void anyadirActividad(String[] datos) throws ClubException {
 		try {
-<span class="nc" id="L36">			int plazas = Integer.parseInt(datos[2]);</span>
-<span class="nc" id="L37">			int matriculados = Integer.parseInt(datos[3]);</span>
-<span class="nc" id="L38">			double tarifa = Double.parseDouble(datos[4]);</span>
-<span class="nc" id="L39">			Grupo g = new Grupo(datos[0], datos[1], plazas, matriculados, tarifa);</span>
-<span class="nc" id="L40">			anyadirActividad(g);</span>
-<span class="nc" id="L41">		} catch (NumberFormatException e) {</span>
+<span class="fc" id="L36">			int plazas = Integer.parseInt(datos[2]);</span>
+<span class="fc" id="L37">			int matriculados = Integer.parseInt(datos[3]);</span>
+<span class="fc" id="L38">			double tarifa = Double.parseDouble(datos[4]);</span>
+<span class="fc" id="L39">			Grupo g = new Grupo(datos[0], datos[1], plazas, matriculados, tarifa);</span>
+<span class="fc" id="L40">			anyadirActividad(g);</span>
+<span class="pc" id="L41">		} catch (NumberFormatException e) {</span>
 <span class="nc" id="L42">			throw new ClubException(&quot;ERROR: formato de número incorrecto&quot;);</span>
-<span class="nc" id="L43">		}</span>
-<span class="nc" id="L44">	}</span>
+		}
+<span class="fc" id="L44">	}</span>
 
 	public void anyadirActividad(Grupo g) throws ClubException {
-<span class="nc bnc" id="L47" title="All 2 branches missed.">		if (g==null){ // ADDME: anaydido para comprobar los grupos nulos</span>
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">		if (g==null){ // ADDME: anaydido para comprobar los grupos nulos</span>
 <span class="nc" id="L48">			throw new ClubException(&quot;ERROR: el grupo es nulo&quot;);</span>
 		}
-<span class="nc" id="L50">		int pos = buscar(g);</span>
-<span class="nc bnc" id="L51" title="All 2 branches missed.">		if (pos == -1) { // El grupo es nuevo</span>
-<span class="nc bnc" id="L52" title="All 2 branches missed.">			if(ngrupos == grupos.length){</span>
+<span class="fc" id="L50">		int pos = buscar(g);</span>
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">		if (pos == -1) { // El grupo es nuevo</span>
+<span class="pc bpc" id="L52" title="1 of 2 branches missed.">			if(ngrupos == grupos.length){</span>
 <span class="nc" id="L53">				throw new ClubException(&quot;ERROR: El límite de grupos no se puede superar&quot;);</span>
 			}
-<span class="nc" id="L55">			grupos[ngrupos] = g;</span>
-<span class="nc" id="L56">			ngrupos++;</span>
-		} else { // El grupo ya existe --&gt; modificamos las plazas
+<span class="fc" id="L55">			grupos[ngrupos] = g;</span>
+<span class="fc" id="L56">			ngrupos++;</span>
+<span class="fc" id="L57">		} else { // El grupo ya existe --&gt; modificamos las plazas</span>
 <span class="nc" id="L58">			grupos[pos].actualizarPlazas(g.getPlazas());</span>
 		}
-<span class="nc" id="L60">	}</span>
+<span class="fc" id="L60">	}</span>
 
 	public int plazasLibres(String actividad) {
 <span class="nc" id="L63">		int p = 0;</span>
@@ -83,7 +83,7 @@ public class ClubDeportivo {
 <span class="nc bnc" id="L83" title="All 2 branches missed.">				if (npersonas &gt;= plazasGrupo) {</span>
 <span class="nc" id="L84">					grupos[i].matricular(plazasGrupo);</span>
 <span class="nc" id="L85">					npersonas -= plazasGrupo;</span>
-				} else {
+<span class="nc" id="L86">				} else {</span>
 <span class="nc" id="L87">					grupos[i].matricular(npersonas);</span>
 				}
 			}
@@ -104,9 +104,9 @@ public class ClubDeportivo {
 	public String toString() {
 <span class="fc" id="L105">		StringJoiner sj = new StringJoiner(&quot;, &quot;, &quot;[ &quot;, &quot; ]&quot;);</span>
 <span class="fc" id="L106">		int i = 0;</span>
-<span class="pc bpc" id="L107" title="1 of 2 branches missed.">		while (i &lt; ngrupos) {</span>
-<span class="nc" id="L108">			sj.add(grupos[i].toString());</span>
-<span class="nc" id="L109">			i++;</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">		while (i &lt; ngrupos) {</span>
+<span class="fc" id="L108">			sj.add(grupos[i].toString());</span>
+<span class="fc" id="L109">			i++;</span>
 		}
 <span class="fc" id="L111">		return nombre + &quot; --&gt; &quot; + sj.toString();</span>
 	}
