@@ -83,4 +83,9 @@ public class GrupoTest {
         assertThrows(ClubException.class, () -> grupo.matricular(0));
         
     }
+
+    @Test
+    void testGetCodigo() {
+        assertEquals("001", grupo.getCodigo());
+    }
 }
