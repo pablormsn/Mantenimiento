@@ -81,4 +81,79 @@ public class ClubDeportivoTest {
 
         assertEquals(2500.0, ingresos);
 }
+
+    @Test
+    void testPlazasLibres() throws ClubException {
+        String[] datos1 = {"Grupo1", "Actividad1", "10", "5", "100.0"};
+        String[] datos2 = {"Grupo2", "Actividad2", "20", "10", "200.0"};
+        
+        club.anyadirActividad(datos1);
+        club.anyadirActividad(datos2);
+
+        int plazasLibres = club.plazasLibres("Actividad1");
+
+        assertEquals(5, plazasLibres);
+    }
+
+    @Test
+    void testPlazasLibresActividadInexistente() throws ClubException {
+        String[] datos1 = {"Grupo1", "Actividad1", "10", "5", "100.0"};
+        String[] datos2 = {"Grupo2", "Actividad2", "20", "10", "200.0"};
+        
+        club.anyadirActividad(datos1);
+        club.anyadirActividad(datos2);
+
+        int plazasLibres = club.plazasLibres("Actividad3");
+
+        assertEquals(0, plazasLibres);
+    }
+
+    @Test
+    void testMatricular() throws ClubException {
+        String[] datos1 = {"Grupo1", "Actividad1", "10", "5", "100.0"};
+        String[] datos2 = {"Grupo2", "Actividad2", "20", "10", "200.0"};
+        
+        club.anyadirActividad(datos1);
+        club.anyadirActividad(datos2);
+
+        club.matricular("Actividad1", 3);
+        club.matricular("Actividad2", 5);
+
+        assertEquals(2, club.plazasLibres("Actividad1"));
+        assertEquals(5, club.plazasLibres("Actividad2"));
+    }
+
+    @Test
+    void testMatricularActividadInexistente() throws ClubException {
+        String[] datos1 = {"Grupo1", "Actividad1", "10", "5", "100.0"};
+        String[] datos2 = {"Grupo2", "Actividad2", "20", "10", "200.0"};
+        
+        club.anyadirActividad(datos1);
+        club.anyadirActividad(datos2);
+
+        assertThrows(ClubException.class, () -> club.matricular("Actividad3", 3));
+    }
+
+    @Test
+    void testMatricularCeroPersonas() throws ClubException {
+        String[] datos1 = {"Grupo1", "Actividad1", "10", "5", "100.0"};
+        String[] datos2 = {"Grupo2", "Actividad2", "20", "10", "200.0"};
+        
+        club.anyadirActividad(datos1);
+        club.anyadirActividad(datos2);
+        club.matricular("Actividad1", 0);
+        assertEquals(5, club.plazasLibres("Actividad1"));
+    }
+
+    @Test
+    void testMatricularPlazasInsuficientes () throws ClubException {
+        String[] datos1 = {"Grupo1", "Actividad1", "10", "5", "100.0"};
+        String[] datos2 = {"Grupo2", "Actividad2", "20", "10", "200.0"};
+        
+        club.anyadirActividad(datos1);
+        club.anyadirActividad(datos2);
+        club.matricular("Actividad1", 5);
+        assertEquals(0,club.plazasLibres("Actividad1"));
+    }
+
 }
