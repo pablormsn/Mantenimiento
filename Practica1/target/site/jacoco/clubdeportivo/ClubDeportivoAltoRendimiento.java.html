@@ -6,18 +6,18 @@ public class ClubDeportivoAltoRendimiento extends ClubDeportivo{
 	private double incremento;
 	
 	public ClubDeportivoAltoRendimiento(String nombre, int maximo, double incremento) throws ClubException {
-<span class="nc" id="L9">		super(nombre);</span>
-<span class="nc bnc" id="L10" title="All 4 branches missed.">		if (maximo&lt;=0 || incremento&lt;=0) {</span>
-<span class="nc" id="L11">			throw new ClubException(&quot;ERRORES: valores 0 o negativos.&quot;);</span>
+<span class="fc" id="L9">		super(nombre);</span>
+<span class="fc bfc" id="L10" title="All 4 branches covered.">		if (maximo&lt;=0 || incremento&lt;=0) {</span>
+<span class="fc" id="L11">			throw new ClubException(&quot;ERRORES: valores 0 o negativos.&quot;);</span>
 		}
-<span class="nc" id="L13">		maximoPersonasGrupo=maximo;</span>
-<span class="nc" id="L14">		this.incremento=incremento;</span>
-<span class="nc" id="L15">	}</span>
+<span class="fc" id="L13">		maximoPersonasGrupo=maximo;</span>
+<span class="fc" id="L14">		this.incremento=incremento;</span>
+<span class="fc" id="L15">	}</span>
 	
 	public ClubDeportivoAltoRendimiento(String nombre, int tam, int maximo, double incremento) throws ClubException {
-<span class="nc" id="L18">		super(nombre,tam);</span>
-<span class="nc bnc" id="L19" title="All 4 branches missed.">		if (maximo&lt;=0 || incremento&lt;=0) {</span>
-<span class="nc" id="L20">			throw new ClubException(&quot;ERRORES: valores 0 o negativos.&quot;);</span>
+<span class="fc" id="L18">		super(nombre,tam);</span>
+<span class="pc bpc" id="L19" title="1 of 4 branches missed.">		if (maximo&lt;=0 || incremento&lt;=0) {</span>
+<span class="fc" id="L20">			throw new ClubException(&quot;ERRORES: valores 0 o negativos.&quot;);</span>
 		}
 <span class="nc" id="L22">		maximoPersonasGrupo=maximo;</span>
 <span class="nc" id="L23">		this.incremento=incremento;</span>
@@ -26,22 +26,22 @@ public class ClubDeportivoAltoRendimiento extends ClubDeportivo{
 	// El club de alto rendimiento tiene limitadas las plazas. Si el número de plazas que se recibe como parametro es mayor que el permitido, 
 	// se establece su valor al maximo permitido por grupo para el club.
 	public void anyadirActividad(String[] datos) throws ClubException {
-<span class="nc bnc" id="L29" title="All 2 branches missed.">		if (datos.length&lt;5) {</span>
-<span class="nc" id="L30">			throw new ClubException (&quot;ERROR: faltan datos&quot;);</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">		if (datos.length&lt;5) {</span>
+<span class="fc" id="L30">			throw new ClubException (&quot;ERROR: faltan datos&quot;);</span>
 		}
 		try {
-<span class="nc" id="L33">			int plazas = Integer.parseInt(datos[2]);</span>
-<span class="nc" id="L34">			int matriculados = Integer.parseInt(datos[3]);</span>
-<span class="nc" id="L35">			double tarifa = Double.parseDouble(datos[4]);</span>
-<span class="nc bnc" id="L36" title="All 2 branches missed.">			if (plazas &gt; maximoPersonasGrupo) {</span>
-<span class="nc" id="L37">				plazas=maximoPersonasGrupo;</span>
+<span class="fc" id="L33">			int plazas = Integer.parseInt(datos[2]);</span>
+<span class="fc" id="L34">			int matriculados = Integer.parseInt(datos[3]);</span>
+<span class="fc" id="L35">			double tarifa = Double.parseDouble(datos[4]);</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">			if (plazas &gt; maximoPersonasGrupo) {</span>
+<span class="fc" id="L37">				plazas=maximoPersonasGrupo;</span>
 			}
-<span class="nc" id="L39">			Grupo g = new Grupo(datos[0], datos[1], plazas, matriculados, tarifa);</span>
-<span class="nc" id="L40">			super.anyadirActividad(g);</span>
-<span class="nc" id="L41">		} catch (NumberFormatException e) {</span>
-<span class="nc" id="L42">			throw new ClubException(&quot;ERROR: formato de número incorrecto&quot;);</span>
+<span class="fc" id="L39">			Grupo g = new Grupo(datos[0], datos[1], plazas, matriculados, tarifa);</span>
+<span class="fc" id="L40">			super.anyadirActividad(g);</span>
+<span class="fc" id="L41">		} catch (NumberFormatException e) {</span>
+<span class="fc" id="L42">			throw new ClubException(&quot;ERROR: formato de número incorrecto&quot;);</span>
 		}
-<span class="nc" id="L44">	}</span>
+<span class="fc" id="L44">	}</span>
 	
 	// Los ingresos del club tienen
 	public double ingresos() {
