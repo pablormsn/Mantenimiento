@@ -8,11 +8,11 @@ public class Grupo {
 	private double tarifa;
 	
 <span class="fc" id="L10">	public Grupo(String codigo, String actividad, int nplazas,  int matriculados, double tarifa) throws ClubException {</span>
-<span class="pc bpc" id="L11" title="2 of 6 branches missed.">		if (nplazas&lt;=0 || matriculados&lt;0 || tarifa &lt;=0) {</span>
+<span class="fc bfc" id="L11" title="All 6 branches covered.">		if (nplazas&lt;=0 || matriculados&lt;0 || tarifa &lt;=0) {</span>
 <span class="fc" id="L12">			throw new ClubException(&quot;ERROR: los datos numéricos no pueden ser menores o iguales que 0.&quot;);</span>
 		}
-<span class="pc bpc" id="L14" title="1 of 2 branches missed.">		if (matriculados&gt;nplazas) {</span>
-<span class="nc" id="L15">			throw new ClubException(&quot;ERROR: El número de plazas es menor que el de matriculados.&quot;);</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">		if (matriculados&gt;nplazas) {</span>
+<span class="fc" id="L15">			throw new ClubException(&quot;ERROR: El número de plazas es menor que el de matriculados.&quot;);</span>
 		}
 <span class="fc" id="L17">		this.codigo=codigo;</span>
 <span class="fc" id="L18">		this.actividad=actividad;</span>
@@ -46,14 +46,14 @@ public class Grupo {
 	}
 	
 	public void actualizarPlazas(int n) throws ClubException { 
-<span class="pc bpc" id="L49" title="1 of 4 branches missed.">		if (n&lt;=0 || n &lt; nmatriculados) {</span>
+<span class="fc bfc" id="L49" title="All 4 branches covered.">		if (n&lt;=0 || n &lt; nmatriculados) {</span>
 <span class="fc" id="L50">			throw new ClubException(&quot;ERROR: número de plazas negativo.&quot;);</span>
 		}
 <span class="fc" id="L52">		nplazas=n;		</span>
 <span class="fc" id="L53">	}</span>
 	
 	public void matricular(int n) throws ClubException {
-<span class="pc bpc" id="L56" title="1 of 4 branches missed.">		if (plazasLibres()&lt; n || n&lt;=0) {</span>
+<span class="fc bfc" id="L56" title="All 4 branches covered.">		if (plazasLibres()&lt; n || n&lt;=0) {</span>
 <span class="fc" id="L57">			throw new ClubException(&quot;ERROR: no hay plazas libres suficientes, plazas libre: &quot;+ plazasLibres()+ &quot; y matriculas: &quot;+n);</span>
 		}
 <span class="fc" id="L59">		nmatriculados+=n;</span>
@@ -65,7 +65,7 @@ public class Grupo {
 	
 	public boolean equals(Object o) {
 <span class="fc" id="L67">		boolean ok=false;</span>
-<span class="pc bpc" id="L68" title="1 of 2 branches missed.">		if (o instanceof Grupo) {</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">		if (o instanceof Grupo) {</span>
 <span class="fc" id="L69">			Grupo otro = (Grupo) o;</span>
 <span class="fc bfc" id="L70" title="All 4 branches covered.">			ok = this.codigo.equalsIgnoreCase(otro.codigo) &amp;&amp; this.actividad.equalsIgnoreCase(otro.actividad);</span>
 		}

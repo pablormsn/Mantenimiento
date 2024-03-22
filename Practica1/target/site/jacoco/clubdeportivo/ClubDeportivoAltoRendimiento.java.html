@@ -16,12 +16,12 @@ public class ClubDeportivoAltoRendimiento extends ClubDeportivo{
 	
 	public ClubDeportivoAltoRendimiento(String nombre, int tam, int maximo, double incremento) throws ClubException {
 <span class="fc" id="L18">		super(nombre,tam);</span>
-<span class="pc bpc" id="L19" title="1 of 4 branches missed.">		if (maximo&lt;=0 || incremento&lt;=0) {</span>
+<span class="fc bfc" id="L19" title="All 4 branches covered.">		if (maximo&lt;=0 || incremento&lt;=0) {</span>
 <span class="fc" id="L20">			throw new ClubException(&quot;ERRORES: valores 0 o negativos.&quot;);</span>
 		}
-<span class="nc" id="L22">		maximoPersonasGrupo=maximo;</span>
-<span class="nc" id="L23">		this.incremento=incremento;</span>
-<span class="nc" id="L24">	}</span>
+<span class="fc" id="L22">		maximoPersonasGrupo=maximo;</span>
+<span class="fc" id="L23">		this.incremento=incremento;</span>
+<span class="fc" id="L24">	}</span>
 	
 	// El club de alto rendimiento tiene limitadas las plazas. Si el número de plazas que se recibe como parametro es mayor que el permitido, 
 	// se establece su valor al maximo permitido por grupo para el club.
@@ -45,8 +45,8 @@ public class ClubDeportivoAltoRendimiento extends ClubDeportivo{
 	
 	// Los ingresos del club tienen
 	public double ingresos() {
-<span class="nc" id="L48">		double cantidad = super.ingresos();</span>
-<span class="nc" id="L49">		return cantidad+cantidad*(incremento/100);</span>
+<span class="fc" id="L48">		double cantidad = super.ingresos();</span>
+<span class="fc" id="L49">		return cantidad+cantidad*(incremento/100);</span>
 	}
 	
 }
