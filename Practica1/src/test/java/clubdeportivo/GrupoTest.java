@@ -8,21 +8,21 @@ public class GrupoTest {
     private Grupo grupo;
 
     @BeforeEach
-    public void setUp() {
-        try {
-            grupo = new Grupo("001", "Yoga", 20, 5, 50.0);
-        } catch (ClubException e) {
-            fail("Error al inicializar el grupo: " + e.getMessage());
-        }
+    public void initTests() throws ClubException {
+        grupo = new Grupo("001", "Yoga", 20, 5, 50.0);
+
     }
 
     @Test
     public void testConstructor() {
-        assertEquals("001", grupo.getCodigo());
-        assertEquals("Yoga", grupo.getActividad());
-        assertEquals(20, grupo.getPlazas());
-        assertEquals(5, grupo.getMatriculados());
-        assertEquals(50.0, grupo.getTarifa(), 0.001);
+        assertThrows(ClubException.class, () -> new Grupo("002", "Natación", -10, 5, 50.0));
+        assertThrows(ClubException.class, () -> new Grupo("002", "Natación", 10, -10, 50.0));
+        assertThrows(ClubException.class, () -> new Grupo("002", "Natación", 10, 5, -50.0));
+        assertThrows(ClubException.class, () -> new Grupo("002", "Natación", 0, 5, 50.0));
+        assertThrows(ClubException.class, () -> new Grupo("002", "Natación", 10, 5, 0));
+        assertThrows(ClubException.class, () -> new Grupo("002", "Natación", 10, 15, 50.0));
+        
+        
     }
 
     @Test
@@ -31,23 +31,17 @@ public class GrupoTest {
     }
 
     @Test
-    public void testActualizarPlazas() {
-        try {
-            grupo.actualizarPlazas(25);
-            assertEquals(25, grupo.getPlazas());
-        } catch (ClubException e) {
-            fail("Error al actualizar las plazas: " + e.getMessage());
-        }
+    public void testActualizarPlazas() throws ClubException {
+        grupo.actualizarPlazas(25);
+        assertEquals(25, grupo.getPlazas());
+
     }
 
     @Test
-    public void testMatricular() {
-        try {
+    public void testMatricular() throws ClubException {
             grupo.matricular(3);
             assertEquals(8, grupo.getMatriculados());
-        } catch (ClubException e) {
-            fail("Error al matricular: " + e.getMessage());
-        }
+
     }
 
     @Test
@@ -55,6 +49,7 @@ public class GrupoTest {
         assertTrue(grupo.equals(new Grupo("001", "Yoga", 20, 5, 50.0)));
         assertFalse(grupo.equals(new Grupo("002", "Yoga", 20, 5, 50.0)));
         assertFalse(grupo.equals(new Grupo("001", "Pilates", 20, 5, 50.0)));
+        assertFalse(grupo.equals("Esto no es un grupo"));
     }
 
     @Test
@@ -75,21 +70,17 @@ public class GrupoTest {
 
     @Test
     public void testActualizarPlazasException() {
-        try {
-            grupo.actualizarPlazas(-5);
-            fail("Se esperaba una excepción por datos inválidos.");
-        } catch (ClubException e) {
-            // Esperado
-        }
+        assertThrows(ClubException.class, () -> grupo.actualizarPlazas(-5));
+        assertThrows(ClubException.class, () -> grupo.actualizarPlazas(4));
+        assertThrows(ClubException.class, () -> grupo.actualizarPlazas(0));
+            
     }
 
     @Test
     public void testMatricularException() {
-        try {
-            grupo.matricular(30);
-            fail("Se esperaba una excepción por falta de plazas.");
-        } catch (ClubException e) {
-            // Esperado
-        }
+        assertThrows(ClubException.class, () -> grupo.matricular(-10));
+        assertThrows(ClubException.class, () -> grupo.matricular(30));
+        assertThrows(ClubException.class, () -> grupo.matricular(0));
+        
     }
 }
