@@ -1,3 +1,10 @@
+/*
+ * Grupo:
+ * Jorge Velázquez Jiménez
+ * Pablo Ruiz Galiánez
+ * Pablo Robles Mansilla
+ * 
+ */
 package clubdeportivo;
 
 import static org.junit.jupiter.api.Assertions.*;
