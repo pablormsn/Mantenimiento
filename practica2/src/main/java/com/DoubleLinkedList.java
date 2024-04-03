@@ -1,3 +1,11 @@
+/*
+ * Grupo:
+ * Jorge Velázquez Jiménez
+ * Pablo Ruiz Galiánez
+ * Pablo Robles Mansilla
+ * 
+ */
+
 package com;
 
 public class DoubleLinkedList<T> implements DoubleLinkedQueue<T> {

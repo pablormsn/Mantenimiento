@@ -1,8 +1,15 @@
+/*
+ * Grupo:
+ * Jorge Velázquez Jiménez
+ * Pablo Ruiz Galiánez
+ * Pablo Robles Mansilla
+ * 
+ */
+
 package com;
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import com.LinkedNode;
+
 
 public class NodeLinkedTest {
     private LinkedNode<Integer> node;
