@@ -50,6 +50,14 @@ public class DoubleLinkedListTest {
     }
 
     @Test
+    public void testDeleteFirstOnSingleElementList() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.append(1);
+        list.deleteFirst();
+        assertEquals(0, list.size());
+    }
+
+    @Test
     public void testDeleteFirst() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
         list.append(1);
@@ -65,6 +73,13 @@ public class DoubleLinkedListTest {
         assertEquals(0, list.size());
     }
 
+    @Test
+    public void testDeleteLastOnSingleElementList() {
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.append(1);
+        list.deleteLast();
+        assertEquals(0, list.size());
+    }
 
     @Test
     public void testDeleteLast() {
