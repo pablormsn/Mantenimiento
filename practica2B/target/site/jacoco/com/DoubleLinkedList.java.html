@@ -28,7 +28,7 @@ public class DoubleLinkedList&lt;T&gt; implements DoubleLinkedQueue&lt;T&gt; {
 <span class="fc bfc" id="L28" title="All 2 branches covered.">        if (first == null) {</span>
 <span class="fc" id="L29">            first = newNode;</span>
 <span class="fc" id="L30">            last = newNode;</span>
-        }else{
+<span class="fc" id="L31">        }else{</span>
 <span class="fc" id="L32">            newNode.setNext(first);</span>
 <span class="fc" id="L33">            first.setPrevious(newNode);</span>
 <span class="fc" id="L34">            first = newNode;</span>
@@ -42,7 +42,7 @@ public class DoubleLinkedList&lt;T&gt; implements DoubleLinkedQueue&lt;T&gt; {
 <span class="fc bfc" id="L42" title="All 2 branches covered.">        if (last == null) {</span>
 <span class="fc" id="L43">            first = newNode;</span>
 <span class="fc" id="L44">            last = newNode;</span>
-        }else{
+<span class="fc" id="L45">        }else{</span>
 <span class="fc" id="L46">            newNode.setPrevious(last);</span>
 <span class="fc" id="L47">            last.setNext(newNode);</span>
 <span class="fc" id="L48">            last = newNode;</span>
@@ -56,7 +56,7 @@ public class DoubleLinkedList&lt;T&gt; implements DoubleLinkedQueue&lt;T&gt; {
 <span class="fc" id="L56">            LinkedNode&lt;T&gt; nextNode = first.getNext();</span>
 <span class="fc bfc" id="L57" title="All 2 branches covered.">            if (nextNode != null) {</span>
 <span class="fc" id="L58">                nextNode.setPrevious(null);</span>
-            } else {
+<span class="fc" id="L59">            } else {</span>
 <span class="fc" id="L60">                last = null;</span>
             }
 <span class="fc" id="L62">            first = nextNode;</span>
@@ -72,7 +72,7 @@ public class DoubleLinkedList&lt;T&gt; implements DoubleLinkedQueue&lt;T&gt; {
 <span class="fc" id="L72">        LinkedNode&lt;T&gt; previousNode = last.getPrevious();</span>
 <span class="fc bfc" id="L73" title="All 2 branches covered.">        if (previousNode != null) {</span>
 <span class="fc" id="L74">            previousNode.setNext(null);</span>
-        } else {
+<span class="fc" id="L75">        } else {</span>
 <span class="fc" id="L76">            first = null;</span>
         }
 <span class="fc" id="L78">        last = previousNode;</span>
@@ -102,12 +102,12 @@ public class DoubleLinkedList&lt;T&gt; implements DoubleLinkedQueue&lt;T&gt; {
 
     @Override
     public T get(int index){
-<span class="pc bpc" id="L105" title="1 of 4 branches missed.">        if (index &lt; 0 || index &gt;= size) {</span>
+<span class="fc bfc" id="L105" title="All 4 branches covered.">        if (index &lt; 0 || index &gt;= size) {</span>
 <span class="fc" id="L106">            throw new IndexOutOfBoundsException();</span>
         }
 <span class="fc" id="L108">        LinkedNode&lt;T&gt; current = first;</span>
-<span class="pc bpc" id="L109" title="1 of 2 branches missed.">        for (int i = 0; i &lt; index; i++) {</span>
-<span class="nc" id="L110">            current = current.getNext();</span>
+<span class="fc bfc" id="L109" title="All 2 branches covered.">        for (int i = 0; i &lt; index; i++) {</span>
+<span class="fc" id="L110">            current = current.getNext();</span>
         }
 <span class="fc" id="L112">        return current.getItem();</span>
     }
@@ -129,16 +129,16 @@ public class DoubleLinkedList&lt;T&gt; implements DoubleLinkedQueue&lt;T&gt; {
 <span class="fc" id="L129">        LinkedNode&lt;T&gt; current = first;</span>
 <span class="fc bfc" id="L130" title="All 2 branches covered.">        while (current != null) {</span>
 <span class="fc bfc" id="L131" title="All 2 branches covered.">            if (current.getItem().equals(value)) {</span>
-<span class="pc bpc" id="L132" title="1 of 2 branches missed.">                if (current == first) {</span>
+<span class="fc bfc" id="L132" title="All 2 branches covered.">                if (current == first) {</span>
 <span class="fc" id="L133">                    deleteFirst();</span>
-<span class="nc bnc" id="L134" title="All 2 branches missed.">                } else if (current == last) {</span>
-<span class="nc" id="L135">                    deleteLast();</span>
-                } else {
-<span class="nc" id="L137">                    LinkedNode&lt;T&gt; previous = current.getPrevious();</span>
-<span class="nc" id="L138">                    LinkedNode&lt;T&gt; next = current.getNext();</span>
-<span class="nc" id="L139">                    previous.setNext(next);</span>
-<span class="nc" id="L140">                    next.setPrevious(previous);</span>
-<span class="nc" id="L141">                    size--;</span>
+<span class="fc bfc" id="L134" title="All 2 branches covered.">                } else if (current == last) {</span>
+<span class="fc" id="L135">                    deleteLast();</span>
+<span class="fc" id="L136">                } else {</span>
+<span class="fc" id="L137">                    LinkedNode&lt;T&gt; previous = current.getPrevious();</span>
+<span class="fc" id="L138">                    LinkedNode&lt;T&gt; next = current.getNext();</span>
+<span class="fc" id="L139">                    previous.setNext(next);</span>
+<span class="fc" id="L140">                    next.setPrevious(previous);</span>
+<span class="fc" id="L141">                    size--;</span>
                 }
             }
 <span class="fc" id="L144">            current = current.getNext();</span>
@@ -147,22 +147,22 @@ public class DoubleLinkedList&lt;T&gt; implements DoubleLinkedQueue&lt;T&gt; {
 
     @Override
     public void sort(Comparator&lt;? super T&gt; comparator){
-<span class="nc bnc" id="L150" title="All 2 branches missed.">        if (size &lt; 2) {</span>
-<span class="nc" id="L151">            return;</span>
+<span class="fc bfc" id="L150" title="All 2 branches covered.">        if (size &lt; 2) {</span>
+<span class="fc" id="L151">            return;</span>
         }
-<span class="nc" id="L153">        LinkedNode&lt;T&gt; current = first;</span>
-<span class="nc bnc" id="L154" title="All 2 branches missed.">        while (current != null) {</span>
-<span class="nc" id="L155">            LinkedNode&lt;T&gt; next = current.getNext();</span>
-<span class="nc bnc" id="L156" title="All 2 branches missed.">            while (next != null) {</span>
-<span class="nc bnc" id="L157" title="All 2 branches missed.">                if (comparator.compare(current.getItem(), next.getItem()) &gt; 0) {</span>
-<span class="nc" id="L158">                    T temp = current.getItem();</span>
-<span class="nc" id="L159">                    current.setItem(next.getItem());</span>
-<span class="nc" id="L160">                    next.setItem(temp);</span>
+<span class="fc" id="L153">        LinkedNode&lt;T&gt; current = first;</span>
+<span class="fc bfc" id="L154" title="All 2 branches covered.">        while (current != null) {</span>
+<span class="fc" id="L155">            LinkedNode&lt;T&gt; next = current.getNext();</span>
+<span class="fc bfc" id="L156" title="All 2 branches covered.">            while (next != null) {</span>
+<span class="fc bfc" id="L157" title="All 2 branches covered.">                if (comparator.compare(current.getItem(), next.getItem()) &gt; 0) {</span>
+<span class="fc" id="L158">                    T temp = current.getItem();</span>
+<span class="fc" id="L159">                    current.setItem(next.getItem());</span>
+<span class="fc" id="L160">                    next.setItem(temp);</span>
                 }
-<span class="nc" id="L162">                next = next.getNext();</span>
+<span class="fc" id="L162">                next = next.getNext();</span>
             }
-<span class="nc" id="L164">            current = current.getNext();</span>
-<span class="nc" id="L165">        }</span>
-<span class="nc" id="L166">    }</span>
+<span class="fc" id="L164">            current = current.getNext();</span>
+        }
+<span class="fc" id="L166">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
