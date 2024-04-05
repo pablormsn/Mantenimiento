@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.DoubleLinkedListTest" time="0.083" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.DoubleLinkedListTest" time="0.101" tests="0" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2\target\test-classes;C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2\target\classes;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\Veji\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Veji\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\Veji\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\Veji\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\Veji\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Veji\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\Veji\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Veji\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;"/>
+    <property name="java.class.path" value="C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2B\target\test-classes;C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2B\target\classes;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\Veji\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Veji\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\Veji\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\Veji\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\Veji\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Veji\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\Veji\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Veji\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;"/>
     <property name="java.vm.vendor" value="Microsoft"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -17,9 +17,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\Veji\AppData\Local\Temp\surefire14784486675995315748\surefirebooter-20240403183813775_3.jar C:\Users\Veji\AppData\Local\Temp\surefire14784486675995315748 2024-04-03T18-38-13_538-jvmRun1 surefire-20240403183813775_1tmp surefire_0-20240403183813775_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Veji\AppData\Local\Temp\surefire14988358189991818696\surefirebooter-20240405142044024_3.jar C:\Users\Veji\AppData\Local\Temp\surefire14988358189991818696 2024-04-05T14-20-43_742-jvmRun1 surefire-20240405142044024_1tmp surefire_0-20240405142044024_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2\target\test-classes;C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2\target\classes;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\Veji\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Veji\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\Veji\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\Veji\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\Veji\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Veji\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\Veji\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Veji\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2B\target\test-classes;C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2B\target\classes;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\Veji\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Veji\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\Veji\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\Veji\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\Veji\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Veji\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\Veji\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Veji\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Veji"/>
     <property name="user.language" value="es"/>
@@ -27,13 +27,13 @@
     <property name="java.version.date" value="2022-08-12"/>
     <property name="java.home" value="C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2"/>
+    <property name="basedir" value="C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2B"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Veji\AppData\Local\Temp\surefire14784486675995315748\surefirebooter-20240403183813775_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Veji\AppData\Local\Temp\surefire14988358189991818696\surefirebooter-20240405142044024_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.16.1+1-LTS"/>
@@ -48,7 +48,7 @@
     <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\Veji\AppData\Local\Temp\"/>
     <property name="java.version" value="11.0.16.1"/>
-    <property name="user.dir" value="C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2"/>
+    <property name="user.dir" value="C:\Users\Veji\Documents\GitHub\Mantenimiento\practica2B"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -60,19 +60,4 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testDeleteLastOnSingleElementList" classname="com.DoubleLinkedListTest" time="0.043"/>
-  <testcase name="testDeleteFirst" classname="com.DoubleLinkedListTest" time="0.0"/>
-  <testcase name="testAppendOnEmptyList" classname="com.DoubleLinkedListTest" time="0.001"/>
-  <testcase name="testFirst" classname="com.DoubleLinkedListTest" time="0.002"/>
-  <testcase name="testLast" classname="com.DoubleLinkedListTest" time="0.001"/>
-  <testcase name="testFirstOnEmptyList" classname="com.DoubleLinkedListTest" time="0.001"/>
-  <testcase name="testDeleteFirstOnSingleElementList" classname="com.DoubleLinkedListTest" time="0.001"/>
-  <testcase name="testPrepend" classname="com.DoubleLinkedListTest" time="0.001"/>
-  <testcase name="testDeleteFirstOnEmptyList" classname="com.DoubleLinkedListTest" time="0.0"/>
-  <testcase name="testLastOnEmptyList" classname="com.DoubleLinkedListTest" time="0.0"/>
-  <testcase name="testDeleteLastOnEmptyList" classname="com.DoubleLinkedListTest" time="0.001"/>
-  <testcase name="testDeleteLast" classname="com.DoubleLinkedListTest" time="0.001"/>
-  <testcase name="testAppend" classname="com.DoubleLinkedListTest" time="0.0"/>
-  <testcase name="testConstructor" classname="com.DoubleLinkedListTest" time="0.0"/>
-  <testcase name="testPrependOnEmptyList" classname="com.DoubleLinkedListTest" time="0.001"/>
 </testsuite>
