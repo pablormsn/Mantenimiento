@@ -1,5 +1,16 @@
 package org.mps.ronqi2;
 
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.when;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mps.dispositivo.Dispositivo;
 
 public class ronQI2Silvertest {
 
@@ -32,4 +43,40 @@ public class ronQI2Silvertest {
      * Usa el ParameterizedTest para realizar un número de lecturas previas a calcular si hay apnea o no (por ejemplo 4, 5 y 10 lecturas).
      * https://junit.org/junit5/docs/current/user-guide/index.html#writing-tests-parameterized-tests
      */
+
+     @Mock
+     private Dispositivo dispositivoMock;
+ 
+     private RonQI2Silver ronQI2Silver;
+ 
+     @BeforeEach
+     public void setUp() {
+         MockitoAnnotations.openMocks(this);
+         ronQI2Silver = new RonQI2Silver();
+         ronQI2Silver.anyadirDispositivo(dispositivoMock);
+     }
+ 
+     @Test
+     public void testInicializarExitoso() {
+         // Simular conexión y configuración exitosas
+         when(dispositivoMock.conectarSensorPresion()).thenReturn(true);
+         when(dispositivoMock.configurarSensorPresion()).thenReturn(true);
+         when(dispositivoMock.conectarSensorSonido()).thenReturn(true);
+         when(dispositivoMock.configurarSensorSonido()).thenReturn(true);
+         assertTrue(ronQI2Silver.inicializar());
+     }
+
+     @Test
+    public void testInicializarFalloConfiguracionPresion() {
+        // Simular fallo en la configuración del sensor de presión
+        when(dispositivoMock.conectarSensorPresion()).thenReturn(true);
+        when(dispositivoMock.configurarSensorPresion()).thenReturn(false); // Configuración fallida
+        when(dispositivoMock.conectarSensorSonido()).thenReturn(true);
+        when(dispositivoMock.configurarSensorSonido()).thenReturn(true);
+        assertFalse(ronQI2Silver.inicializar());
+    }
+
+   
+
+    
 }
