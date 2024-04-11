@@ -4,8 +4,8 @@
 	
 	<!--Informacion del proyecto -->
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.mps</groupId>
-	<artifactId>Practica3</artifactId>
+	<groupId>com.example</groupId>
+	<artifactId>mockito-mps-uma</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	
 	<!--Propiedades del proyecto y maven-->
@@ -57,14 +57,9 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
-				<configuration>
-					<release>11</release>
-				</configuration>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.1</version>
 			</plugin>
-
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
