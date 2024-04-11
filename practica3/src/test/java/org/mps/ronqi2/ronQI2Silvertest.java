@@ -1,3 +1,10 @@
+/*
+ * Grupo:
+ * Jorge Velázquez Jiménez
+ * Pablo Ruiz Galiánez
+ * Pablo Robles Mansilla
+ * 
+ */
 package org.mps.ronqi2;
 
 import static org.junit.jupiter.api.Assertions.*;
