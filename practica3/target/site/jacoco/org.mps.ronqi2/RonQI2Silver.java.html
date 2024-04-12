@@ -52,11 +52,11 @@ public class RonQI2Silver extends RonQI2{
 <span class="fc" id="L52">                .average()</span>
 <span class="fc" id="L53">                .orElse(0.0);</span>
         
-<span class="fc bfc" id="L55" title="All 4 branches covered.">        if (avgP&gt;=thresholdP &amp;&amp; avgS &gt; thresholdS){</span>
-<span class="fc" id="L56">            resultado = false;</span>
-<span class="fc" id="L57">        }   </span>
+<span class="fc bfc" id="L55" title="All 4 branches covered.">        if (avgP&gt;thresholdP &amp;&amp; avgS &gt; thresholdS){ //El error era que daba false cuando la media superaba el umbral</span>
+<span class="fc" id="L56">            resultado = true;</span>
+        }   
         else{
-<span class="fc" id="L59">            resultado = true;</span>
+<span class="fc" id="L59">            resultado = false;</span>
         }
 <span class="fc" id="L61">        return resultado;</span>
     }

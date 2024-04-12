@@ -76,10 +76,16 @@ public class ronQI2SilverTest {
          when(disp.configurarSensorSonido()).thenReturn(false);
          assertFalse(ronQI2Silver.inicializar());
 
+         when(disp.conectarSensorPresion()).thenReturn(true);
+         when(disp.configurarSensorPresion()).thenReturn(false);
+         when(disp.conectarSensorSonido()).thenReturn(false);
+         when(disp.configurarSensorSonido()).thenReturn(false);
+         assertFalse(ronQI2Silver.inicializar());
 
-         verify(disp, times(5)).conectarSensorPresion();
-         verify(disp, times(4)).configurarSensorPresion();
-         verify(disp, times(4)).conectarSensorSonido();
+
+         verify(disp, times(6)).conectarSensorPresion();
+         verify(disp, times(5)).configurarSensorPresion();
+         verify(disp, times(5)).conectarSensorSonido();
          verify(disp, times(4)).configurarSensorSonido();
      }
 
@@ -155,7 +161,7 @@ public class ronQI2SilverTest {
              ronQI2Silver.obtenerNuevaLectura();
          }
  
-         assertFalse(ronQI2Silver.evaluarApneaSuenyo());
+         assertTrue(ronQI2Silver.evaluarApneaSuenyo());
 
          when(disp.leerSensorPresion()).thenReturn(10.0f);
          when(disp.leerSensorSonido()).thenReturn(35.0f);
@@ -164,7 +170,7 @@ public class ronQI2SilverTest {
              ronQI2Silver.obtenerNuevaLectura();
          }
  
-         assertTrue(ronQI2Silver.evaluarApneaSuenyo());
+         assertFalse(ronQI2Silver.evaluarApneaSuenyo());
 
          when(disp.leerSensorPresion()).thenReturn(25.0f);
          when(disp.leerSensorSonido()).thenReturn(15.0f);
@@ -173,7 +179,7 @@ public class ronQI2SilverTest {
              ronQI2Silver.obtenerNuevaLectura();
          }
  
-         assertTrue(ronQI2Silver.evaluarApneaSuenyo());
+         assertFalse(ronQI2Silver.evaluarApneaSuenyo());
      }
 
      @Test
