@@ -142,6 +142,33 @@ public class EvolutionaryAlgorithmTest {
             SelectionOperator obtainedSelectionOperator = ea.getSelectionOperator();
             assertEquals(selectionOperator2, obtainedSelectionOperator);
         }
+
+        @Test
+        public void testSelectWithNullPopulation() throws EvolutionaryAlgorithmException {
+            SelectionOperator selectionOperator = new TournamentSelection(2);
+            int[] population = null;
+            assertThrows(EvolutionaryAlgorithmException.class, () -> {
+                selectionOperator.select(population);
+            });
+        }
+
+        @Test
+        public void testSelectWithEmptyPopulation() throws EvolutionaryAlgorithmException {
+            SelectionOperator selectionOperator = new TournamentSelection(2);
+            int[] population = {};
+            assertThrows(EvolutionaryAlgorithmException.class, () -> {
+                selectionOperator.select(population);
+            });
+        }
+
+        @Test
+        public void testTournamentSelectionNegativeSize() throws EvolutionaryAlgorithmException {
+            assertThrows(EvolutionaryAlgorithmException.class, () ->  {
+                new TournamentSelection(-1);
+            });
+        }
+       
+    
     }
 
     @Nested
