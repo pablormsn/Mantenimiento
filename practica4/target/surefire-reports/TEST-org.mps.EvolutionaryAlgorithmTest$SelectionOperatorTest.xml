@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.mps.EvolutionaryAlgorithmTest$SelectionOperatorTest" time="0.014" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.mps.EvolutionaryAlgorithmTest$SelectionOperatorTest" time="0.01" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\Veji\AppData\Local\Temp\surefire6809301946289439913\surefirebooter-20240423144322669_3.jar C:\Users\Veji\AppData\Local\Temp\surefire6809301946289439913 2024-04-23T14-43-22_419-jvmRun1 surefire-20240423144322669_1tmp surefire_0-20240423144322669_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Veji\AppData\Local\Temp\surefire13265188717385946852\surefirebooter-20240423144926846_3.jar C:\Users\Veji\AppData\Local\Temp\surefire13265188717385946852 2024-04-23T14-49-26_599-jvmRun1 surefire-20240423144926846_1tmp surefire_0-20240423144926846_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Veji\Documents\GitHub\Mantenimiento\practica4\target\test-classes;C:\Users\Veji\Documents\GitHub\Mantenimiento\practica4\target\classes;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.1\junit-jupiter-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.1\junit-jupiter-api-5.10.1.jar;C:\Users\Veji\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Veji\.m2\repository\org\junit\platform\junit-platform-commons\1.10.1\junit-platform-commons-1.10.1.jar;C:\Users\Veji\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.1\junit-jupiter-params-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.1\junit-jupiter-engine-5.10.1.jar;C:\Users\Veji\.m2\repository\org\junit\platform\junit-platform-engine\1.10.1\junit-platform-engine-1.10.1.jar;C:\Users\Veji\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\Veji\.m2\repository\net\bytebuddy\byte-buddy\1.14.9\byte-buddy-1.14.9.jar;C:\Users\Veji\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.9\byte-buddy-agent-1.14.9.jar;C:\Users\Veji\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Veji\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Veji\AppData\Local\Temp\surefire6809301946289439913\surefirebooter-20240423144322669_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Veji\AppData\Local\Temp\surefire13265188717385946852\surefirebooter-20240423144926846_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.16.1+1-LTS"/>
@@ -60,9 +60,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testGetSelectionOperator" classname="org.mps.EvolutionaryAlgorithmTest$SelectionOperatorTest" time="0.0"/>
+  <testcase name="testGetSelectionOperator" classname="org.mps.EvolutionaryAlgorithmTest$SelectionOperatorTest" time="0.002"/>
   <testcase name="testTournamentSelectionNegativeSize" classname="org.mps.EvolutionaryAlgorithmTest$SelectionOperatorTest" time="0.001"/>
-  <testcase name="testSelectWithEmptyPopulation" classname="org.mps.EvolutionaryAlgorithmTest$SelectionOperatorTest" time="0.002"/>
+  <testcase name="testSelectWithEmptyPopulation" classname="org.mps.EvolutionaryAlgorithmTest$SelectionOperatorTest" time="0.003"/>
   <testcase name="testSetSelectionOperator" classname="org.mps.EvolutionaryAlgorithmTest$SelectionOperatorTest" time="0.001"/>
-  <testcase name="testSelectWithNullPopulation" classname="org.mps.EvolutionaryAlgorithmTest$SelectionOperatorTest" time="0.003"/>
+  <testcase name="testSelectWithNullPopulation" classname="org.mps.EvolutionaryAlgorithmTest$SelectionOperatorTest" time="0.0"/>
 </testsuite>

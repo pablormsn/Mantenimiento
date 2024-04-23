@@ -118,6 +118,44 @@ public class EvolutionaryAlgorithmTest {
             CrossoverOperator obtainedCrossoverOperator = ea.getCrossoverOperator();
             assertEquals(crossoverOperator2, obtainedCrossoverOperator);
         }
+
+        @Test
+        public void testCrossoverWithNullParents() throws EvolutionaryAlgorithmException {
+            CrossoverOperator crossoverOperator = new OnePointCrossover();
+            int[] parent1 = null;
+            int[] parent2 = null;
+            assertThrows(EvolutionaryAlgorithmException.class, () -> {
+                crossoverOperator.crossover(parent1, parent2);
+            });
+        }
+        @Test
+        public void testCrossoverWithEmptyParents() throws EvolutionaryAlgorithmException {
+            CrossoverOperator crossoverOperator = new OnePointCrossover();
+            int[] parent1 = {};
+            int[] parent2 = {};
+            assertThrows(EvolutionaryAlgorithmException.class, () -> {
+                crossoverOperator.crossover(parent1, parent2);
+            });
+        }
+        @Test
+        public void testCrossoverWithParentsWithDiffLenght() throws EvolutionaryAlgorithmException {
+            CrossoverOperator crossoverOperator = new OnePointCrossover();
+            int[] parent1 = {1};
+            int[] parent2 = {1,2};
+            assertThrows(EvolutionaryAlgorithmException.class, () -> {
+                crossoverOperator.crossover(parent1, parent2);
+            });
+        }
+        @Test
+        public void testCrossoverWithParent2Null() throws EvolutionaryAlgorithmException {
+            CrossoverOperator crossoverOperator = new OnePointCrossover();
+            int[] parent1 = {1};
+            int[] parent2 = null;
+            assertThrows(EvolutionaryAlgorithmException.class, () -> {
+                crossoverOperator.crossover(parent1, parent2);
+            });
+        }
+
     }
 
     @Nested
