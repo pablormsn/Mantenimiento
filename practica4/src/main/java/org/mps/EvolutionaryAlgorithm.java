@@ -53,7 +53,13 @@ public class EvolutionaryAlgorithm {
     }
 
     public int[][] optimize(int[][] population) throws EvolutionaryAlgorithmException {
-
+        //
+        //
+        //
+        // En este if falta manejar las poblaciones que no son pares
+        //
+        //
+        //
         if (population != null && population.length > 0 && population[0]!=null && population[0].length>0) {
             // Creamos una nueva población para los descendientes
             int[][] offspringPopulation = new int[population.length][population.length];
