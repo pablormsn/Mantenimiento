@@ -1,4 +1,4 @@
-package com.uma.example.springuma.integration.base;
+package com.uma.example.springuma.integration;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.uma.example.springuma.integration.base.AbstractIntegration;
 import com.uma.example.springuma.model.Medico;
 import com.uma.example.springuma.model.MedicoService;
 
@@ -17,7 +18,7 @@ import java.sql.Statement;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-public class MedicoControllerIntegrationTest extends AbstractIntegration {
+public class MedicoControllerIT extends AbstractIntegration {
 
     @Autowired
     private MockMvc mockMvc;

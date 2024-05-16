@@ -1,4 +1,4 @@
-package com.uma.example.springuma.integration.base;
+package com.uma.example.springuma.integration;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
+import com.uma.example.springuma.integration.base.AbstractIntegration;
 import com.uma.example.springuma.model.Imagen;
 import com.uma.example.springuma.model.ImagenService;
 import com.uma.example.springuma.model.Informe;
@@ -26,7 +27,7 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class InformeControllerIntegrationTest extends AbstractIntegration {
+public class InformeControllerIT extends AbstractIntegration {
 
     @Autowired
     private WebTestClient webTestClient;
