@@ -1,3 +1,11 @@
+/*
+ * Grupo:
+ * Jorge Velázquez Jiménez
+ * Pablo Ruiz Galiánez
+ * Pablo Robles Mansilla
+ * 
+ */
+
 package com.uma.example.springuma.integration;
 
 import org.junit.jupiter.api.BeforeEach;
