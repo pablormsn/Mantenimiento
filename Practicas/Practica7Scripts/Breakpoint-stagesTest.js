@@ -1,3 +1,11 @@
+/*
+ * Grupo:
+ * Jorge Velázquez Jiménez
+ * Pablo Ruiz Galiánez
+ * Pablo Robles Mansilla
+ * 
+ */
+
 import http from 'k6/http';
 import { check } from 'k6';
 
