@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CodeCoverageExample.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">examen2023</a> &gt; <a href="index.source.html" class="el_package">es.uma.informatica.mps.examen2023.whiteboxtesting</a> &gt; <span class="el_source">CodeCoverageExample.java</span></div><h1>CodeCoverageExample.java</h1><pre class="source lang-java linenums">package es.uma.informatica.mps.examen2023.whiteboxtesting;
+
+<span class="fc" id="L3">public class CodeCoverageExample {</span>
+<span class="fc" id="L4">  enum GENDER {MALE, FEMALE}</span>
+
+  public boolean methodToTest(GENDER gender, int age, int weight, int height) {
+<span class="fc" id="L7">    boolean result = false ;</span>
+<span class="fc bfc" id="L8" title="All 8 branches covered.">    if (((gender == GENDER.MALE) || (age &gt; 50)) &amp;&amp; ((weight &gt; 80) || (height &gt; 180))) {</span>
+<span class="fc" id="L9">      result = true ;</span>
+    }
+
+<span class="fc" id="L12">    return result;</span>
+  }
+}
+/* GENDER | age | weight | height | result
+    * --------------------------------
+   1*   V       V      V        V       V +
+   2*   V       V      V        F       V +
+   3*   V       V      F        V       V +
+   4*   V       V      F        F       F +
+   5*   V       F      V        V       V +
+   6*   V       F      V        F       V +
+   7*   V       F      F        V       V +
+   8*   V       F      F        F       F +
+   9*   F       V      V        V       V +
+  10*   F       V      V        F       V +
+  11*   F       V      F        V       V +
+  12*   F       V      F        F       F +
+  13*   F       F      V        V       F +
+  14*   F       F      V        F       F +
+  15*   F       F      F        V       F +
+  16*   F       F      F        F       F 
+    * 
+    */
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DictionaryImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">examen2023</a> &gt; <a href="index.source.html" class="el_package">es.uma.informatica.mps.examen2023.classcounter.dictionary</a> &gt; <span class="el_source">DictionaryImpl.java</span></div><h1>DictionaryImpl.java</h1><pre class="source lang-java linenums">package es.uma.informatica.mps.examen2023.classcounter.dictionary;
+
+import es.uma.informatica.mps.examen2023.classcounter.KeyNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Stream;
+
+<span class="nc" id="L8">public class DictionaryImpl&lt;K,V&gt; implements Dictionary&lt;K, V&gt; {</span>
+	
+<span class="nc" id="L10">	private Map&lt;K,V&gt; map = new HashMap&lt;&gt;();</span>
+
+	@Override
+	public void put(K key, V value) {
+<span class="nc" id="L14">		map.put(key, value);</span>
+<span class="nc" id="L15">	}</span>
+
+	@Override
+	public V get(K value) throws KeyNotFoundException {
+<span class="nc bnc" id="L19" title="All 2 branches missed.">		if (map.containsKey(value)) {</span>
+<span class="nc" id="L20">			return map.get(value);</span>
+		} else {
+<span class="nc" id="L22">			throw new KeyNotFoundException();</span>
+		}
+	}
+
+	@Override
+	public boolean isEmpty() {
+<span class="nc" id="L28">		return map.isEmpty();</span>
+	}
+
+	@Override
+	public int numberOfItems() {
+<span class="nc" id="L33">		return map.size();</span>
+	}
+
+	@Override
+	public Stream&lt;K&gt; keyStream() {
+<span class="nc" id="L38">		return map.keySet().stream();</span>
+	}
+	
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
