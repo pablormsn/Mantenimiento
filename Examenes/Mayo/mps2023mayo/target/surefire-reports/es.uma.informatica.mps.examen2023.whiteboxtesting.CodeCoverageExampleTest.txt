@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
 Test set: es.uma.informatica.mps.examen2023.whiteboxtesting.CodeCoverageExampleTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.121 s - in es.uma.informatica.mps.examen2023.whiteboxtesting.CodeCoverageExampleTest
-es.uma.informatica.mps.examen2023.whiteboxtesting.CodeCoverageExampleTest.testGender  Time elapsed: 0.08 s
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in es.uma.informatica.mps.examen2023.whiteboxtesting.CodeCoverageExampleTest
+es.uma.informatica.mps.examen2023.whiteboxtesting.CodeCoverageExampleTest.testCodeCoverage  Time elapsed: 0.006 s

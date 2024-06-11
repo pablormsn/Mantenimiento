@@ -1,6 +1,6 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-examen2023,es.uma.informatica.mps.examen2023.classcounter,ClassCounter,67,0,8,0,17,0,8,0,4,0
+examen2023,es.uma.informatica.mps.examen2023.classcounter,ClassCounter,0,67,0,8,0,17,0,8,0,4
 examen2023,es.uma.informatica.mps.examen2023.classcounter,KeyNotFoundException,3,0,0,0,1,0,1,0,1,0
-examen2023,es.uma.informatica.mps.examen2023.whiteboxtesting,CodeCoverageExample.GENDER,0,15,0,0,0,1,0,1,0,1
+examen2023,es.uma.informatica.mps.examen2023.whiteboxtesting,CodeCoverageExample.GENDER,0,24,0,0,0,1,0,1,0,1
 examen2023,es.uma.informatica.mps.examen2023.whiteboxtesting,CodeCoverageExample,0,21,0,8,0,5,0,6,0,2
 examen2023,es.uma.informatica.mps.examen2023.classcounter.dictionary,DictionaryImpl,42,0,2,0,10,0,7,0,6,0

@@ -20,34 +20,34 @@ public class ClassCounter {
 	private Dictionary&lt;String, Long&gt; classesInPackages;
 	private Long processingLimit;
 	
-<span class="nc" id="L23">	public ClassCounter(Dictionary&lt;String, Long&gt; classesInPackages, Long processingLimit) {</span>
-<span class="nc" id="L24">		this.classesInPackages = classesInPackages;</span>
-<span class="nc" id="L25">		this.processingLimit = processingLimit;</span>
-<span class="nc" id="L26">	}</span>
+<span class="fc" id="L23">	public ClassCounter(Dictionary&lt;String, Long&gt; classesInPackages, Long processingLimit) {</span>
+<span class="fc" id="L24">		this.classesInPackages = classesInPackages;</span>
+<span class="fc" id="L25">		this.processingLimit = processingLimit;</span>
+<span class="fc" id="L26">	}</span>
 	
 	public long count (String packageName) {
-<span class="nc bnc" id="L29" title="All 2 branches missed.">		if (packageName == null) {</span>
-<span class="nc" id="L30">			throw new IllegalArgumentException(&quot;The package name should not be null&quot;);</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">		if (packageName == null) {</span>
+<span class="fc" id="L30">			throw new IllegalArgumentException(&quot;The package name should not be null&quot;);</span>
 		}
 		
-<span class="nc bnc" id="L33" title="All 2 branches missed.">		if (classesInPackages.isEmpty()) {</span>
-<span class="nc" id="L34">			return 0;</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">		if (classesInPackages.isEmpty()) {</span>
+<span class="fc" id="L34">			return 0;</span>
 		}
 		
-<span class="nc bnc" id="L37" title="All 4 branches missed.">		if (processingLimit != null &amp;&amp; classesInPackages.numberOfItems() &gt; processingLimit) {</span>
-<span class="nc" id="L38">			throw new IllegalStateException(&quot;Too many packages to process&quot;);</span>
+<span class="fc bfc" id="L37" title="All 4 branches covered.">		if (processingLimit != null &amp;&amp; classesInPackages.numberOfItems() &gt; processingLimit) {</span>
+<span class="fc" id="L38">			throw new IllegalStateException(&quot;Too many packages to process&quot;);</span>
 		}
 		
-<span class="nc" id="L41">		return classesInPackages.keyStream()</span>
-<span class="nc" id="L42">				.filter(key-&gt;key.startsWith(packageName))</span>
-<span class="nc" id="L43">				.mapToLong(key-&gt;{</span>
+<span class="fc" id="L41">		return classesInPackages.keyStream()</span>
+<span class="fc" id="L42">				.filter(key-&gt;key.startsWith(packageName))</span>
+<span class="fc" id="L43">				.mapToLong(key-&gt;{</span>
 					try {
-<span class="nc" id="L45">						return classesInPackages.get(key);</span>
-<span class="nc" id="L46">					} catch (KeyNotFoundException e) {</span>
-<span class="nc" id="L47">						throw new IllegalStateException(e);</span>
+<span class="fc" id="L45">						return classesInPackages.get(key);</span>
+<span class="fc" id="L46">					} catch (KeyNotFoundException e) {</span>
+<span class="fc" id="L47">						throw new IllegalStateException(e);</span>
 					}
 			})
-<span class="nc" id="L50">			.sum();</span>
+<span class="fc" id="L50">			.sum();</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

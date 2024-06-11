@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: es.uma.informatica.mps.examen2023.classcounter.ClassCounterTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.451 s - in es.uma.informatica.mps.examen2023.classcounter.ClassCounterTest
+es.uma.informatica.mps.examen2023.classcounter.ClassCounterTest.testCountKeyNotFound  Time elapsed: 2.356 s
+es.uma.informatica.mps.examen2023.classcounter.ClassCounterTest.testCountNumberOfItemsBiggerThanLimit  Time elapsed: 0.005 s
+es.uma.informatica.mps.examen2023.classcounter.ClassCounterTest.testCountNullPackageName  Time elapsed: 0.004 s
+es.uma.informatica.mps.examen2023.classcounter.ClassCounterTest.testCountNumberOfItemsLessThanLimit  Time elapsed: 0.006 s
+es.uma.informatica.mps.examen2023.classcounter.ClassCounterTest.testCountEmptyDictionary  Time elapsed: 0.003 s
